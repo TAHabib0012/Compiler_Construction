@@ -1,0 +1,44 @@
+
+3.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 44 24 1c 00 00 00 	mov    DWORD PTR [esp+0x1c],0x0
+  15:	00 
+  16:	8d 44 24 18          	lea    eax,[esp+0x18]
+  1a:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  1e:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  25:	e8 00 00 00 00       	call   2a <_main+0x2a>
+  2a:	8d 44 24 14          	lea    eax,[esp+0x14]
+  2e:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  32:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  39:	e8 00 00 00 00       	call   3e <_main+0x3e>
+  3e:	8b 54 24 14          	mov    edx,DWORD PTR [esp+0x14]
+  42:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  46:	39 c2                	cmp    edx,eax
+  48:	7d 0e                	jge    58 <_main+0x58>
+  4a:	c7 04 24 03 00 00 00 	mov    DWORD PTR [esp],0x3
+  51:	e8 00 00 00 00       	call   56 <_main+0x56>
+  56:	eb 26                	jmp    7e <_main+0x7e>
+  58:	8b 54 24 14          	mov    edx,DWORD PTR [esp+0x14]
+  5c:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  60:	39 c2                	cmp    edx,eax
+  62:	7e 0e                	jle    72 <_main+0x72>
+  64:	c7 04 24 0c 00 00 00 	mov    DWORD PTR [esp],0xc
+  6b:	e8 00 00 00 00       	call   70 <_main+0x70>
+  70:	eb 0c                	jmp    7e <_main+0x7e>
+  72:	c7 04 24 16 00 00 00 	mov    DWORD PTR [esp],0x16
+  79:	e8 00 00 00 00       	call   7e <_main+0x7e>
+  7e:	b8 00 00 00 00       	mov    eax,0x0
+  83:	c9                   	leave  
+  84:	c3                   	ret    
+  85:	90                   	nop
+  86:	90                   	nop
+  87:	90                   	nop

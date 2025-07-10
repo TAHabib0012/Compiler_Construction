@@ -1,0 +1,32 @@
+
+6.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 44 24 14 00 00 00 	mov    DWORD PTR [esp+0x14],0x0
+  15:	00 
+  16:	c7 44 24 1c 00 00 00 	mov    DWORD PTR [esp+0x1c],0x0
+  1d:	00 
+  1e:	c7 44 24 18 01 00 00 	mov    DWORD PTR [esp+0x18],0x1
+  25:	00 
+  26:	eb 0d                	jmp    35 <_main+0x35>
+  28:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  2c:	01 44 24 1c          	add    DWORD PTR [esp+0x1c],eax
+  30:	83 44 24 18 01       	add    DWORD PTR [esp+0x18],0x1
+  35:	83 7c 24 18 64       	cmp    DWORD PTR [esp+0x18],0x64
+  3a:	7e ec                	jle    28 <_main+0x28>
+  3c:	8b 44 24 1c          	mov    eax,DWORD PTR [esp+0x1c]
+  40:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  44:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  4b:	e8 00 00 00 00       	call   50 <_main+0x50>
+  50:	b8 00 00 00 00       	mov    eax,0x0
+  55:	c9                   	leave  
+  56:	c3                   	ret    
+  57:	90                   	nop

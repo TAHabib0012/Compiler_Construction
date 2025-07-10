@@ -1,0 +1,24 @@
+
+subtraction.o:     file format pe-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	55                   	push   rbp
+   1:	48 89 e5             	mov    rbp,rsp
+   4:	48 83 ec 30          	sub    rsp,0x30
+   8:	e8 00 00 00 00       	call   d <main+0xd>
+   d:	c7 45 fc 75 00 00 00 	mov    DWORD PTR [rbp-0x4],0x75
+  14:	c7 45 f8 02 00 00 00 	mov    DWORD PTR [rbp-0x8],0x2
+  1b:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  1e:	2b 45 f8             	sub    eax,DWORD PTR [rbp-0x8]
+  21:	89 45 f4             	mov    DWORD PTR [rbp-0xc],eax
+  24:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+  27:	48 8d 0d 00 00 00 00 	lea    rcx,[rip+0x0]        # 2e <main+0x2e>
+  2e:	89 c2                	mov    edx,eax
+  30:	e8 00 00 00 00       	call   35 <main+0x35>
+  35:	b8 00 00 00 00       	mov    eax,0x0
+  3a:	48 83 c4 30          	add    rsp,0x30
+  3e:	5d                   	pop    rbp
+  3f:	c3                   	ret

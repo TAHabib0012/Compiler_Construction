@@ -1,0 +1,45 @@
+
+2.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 44 24 1c 00 00 00 	mov    DWORD PTR [esp+0x1c],0x0
+  15:	00 
+  16:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  1d:	e8 00 00 00 00       	call   22 <_main+0x22>
+  22:	8d 44 24 18          	lea    eax,[esp+0x18]
+  26:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  2a:	c7 04 24 14 00 00 00 	mov    DWORD PTR [esp],0x14
+  31:	e8 00 00 00 00       	call   36 <_main+0x36>
+  36:	c7 04 24 18 00 00 00 	mov    DWORD PTR [esp],0x18
+  3d:	e8 00 00 00 00       	call   42 <_main+0x42>
+  42:	8d 44 24 14          	lea    eax,[esp+0x14]
+  46:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  4a:	c7 04 24 14 00 00 00 	mov    DWORD PTR [esp],0x14
+  51:	e8 00 00 00 00       	call   56 <_main+0x56>
+  56:	eb 10                	jmp    68 <_main+0x68>
+  58:	8b 44 24 14          	mov    eax,DWORD PTR [esp+0x14]
+  5c:	83 c0 01             	add    eax,0x1
+  5f:	89 44 24 14          	mov    DWORD PTR [esp+0x14],eax
+  63:	83 44 24 1c 01       	add    DWORD PTR [esp+0x1c],0x1
+  68:	8b 54 24 14          	mov    edx,DWORD PTR [esp+0x14]
+  6c:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  70:	39 c2                	cmp    edx,eax
+  72:	75 e4                	jne    58 <_main+0x58>
+  74:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  78:	8b 54 24 1c          	mov    edx,DWORD PTR [esp+0x1c]
+  7c:	89 54 24 08          	mov    DWORD PTR [esp+0x8],edx
+  80:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  84:	c7 04 24 3c 00 00 00 	mov    DWORD PTR [esp],0x3c
+  8b:	e8 00 00 00 00       	call   90 <_main+0x90>
+  90:	b8 00 00 00 00       	mov    eax,0x0
+  95:	c9                   	leave  
+  96:	c3                   	ret    
+  97:	90                   	nop
